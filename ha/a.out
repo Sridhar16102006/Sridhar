@@ -1,0 +1,52 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6117a25ca650 .scope module, "tb_ha" "tb_ha" 2 1;
+ .timescale 0 0;
+v0x6117a25dcac0_0 .var "a", 1 0;
+v0x6117a25dcb80_0 .net "c", 0 0, L_0x6117a25dce90;  1 drivers
+v0x6117a25dcc50_0 .net "s", 0 0, L_0x6117a25dcd50;  1 drivers
+S_0x6117a25ca7e0 .scope module, "h1" "ha" 2 4, 3 1 0, S_0x6117a25ca650;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "s";
+    .port_info 1 /OUTPUT 1 "c";
+    .port_info 2 /INPUT 2 "a";
+v0x6117a25caa10_0 .net "a", 1 0, v0x6117a25dcac0_0;  1 drivers
+v0x6117a25dc8e0_0 .net "c", 0 0, L_0x6117a25dce90;  alias, 1 drivers
+v0x6117a25dc9a0_0 .net "s", 0 0, L_0x6117a25dcd50;  alias, 1 drivers
+L_0x6117a25dcd50 .reduce/xor v0x6117a25dcac0_0;
+L_0x6117a25dce90 .reduce/and v0x6117a25dcac0_0;
+    .scope S_0x6117a25ca650;
+T_0 ;
+    %vpi_call 2 6 "$dumpfile", "ha.vcd" {0 0 0};
+    %vpi_call 2 7 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6117a25ca650 {0 0 0};
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x6117a25dcac0_0, 0, 2;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x6117a25dcac0_0, 0, 2;
+    %delay 100, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x6117a25dcac0_0, 0, 2;
+    %delay 100, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x6117a25dcac0_0, 0, 2;
+    %end;
+    .thread T_0;
+    .scope S_0x6117a25ca650;
+T_1 ;
+    %vpi_call 2 15 "$monitor", "time = %t a = %b s = %b c = %b", $time, v0x6117a25dcac0_0, v0x6117a25dcc50_0, v0x6117a25dcb80_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_ha.v";
+    "ha.v";
