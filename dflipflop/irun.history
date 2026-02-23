@@ -1,0 +1,8 @@
+s1(23Feb2026:11:17:10):  irun dff.v 
+s2(23Feb2026:11:17:31):  irun tb_dff.v 
+s3(23Feb2026:11:19:33):  irun tb_dff.v 
+s4(23Feb2026:11:20:00):  irun tb_dff.v 
+s5(23Feb2026:11:20:37):  irun dff.v tb_dff.v 
+s6(23Feb2026:11:21:21):  irun dff.v tb_dff.v 
+s7(23Feb2026:11:21:54):  irun dff.v tb_dff.v -access +rwc -gui 
+s8(23Feb2026:11:26:42):  irun dff.v tb_dff.v -access +rwc -gui 
