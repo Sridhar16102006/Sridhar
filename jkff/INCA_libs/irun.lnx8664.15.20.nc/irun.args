@@ -1,0 +1,9 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+jkff.v
+tb_jkff.v
+-access
++rwc
+-gui

@@ -1,0 +1,73 @@
+irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s086: Started on Feb 23, 2026 at 11:52:58 IST
+irun
+	jkff.v
+	tb_jkff.v
+	-access +rwc
+	-gui
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_dff
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.dff:v <0x1848456e>
+			streams:   2, words:   765
+		worklib.tb_dff:v <0x22fe5aa6>
+			streams:   8, words:  8022
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           5       5
+		Scalar wires:        5       -
+		Always blocks:       2       2
+		Initial blocks:      2       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.tb_dff:v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb_dff.clk tb_dff.j tb_dff.k tb_dff.q tb_dff.res
+Created probe 1
+ncsim> run
+time =                    0 j = 0 k = 0 q = x res = 1 clk = 0
+time =                   25 j = 0 k = 0 q = x res = 1 clk = 1
+time =                   50 j = 0 k = 0 q = x res = 1 clk = 0
+time =                   75 j = 0 k = 0 q = x res = 1 clk = 1
+time =                  100 j = 0 k = 0 q = 0 res = 0 clk = 0
+time =                  125 j = 0 k = 0 q = 0 res = 0 clk = 1
+time =                  150 j = 0 k = 0 q = 0 res = 0 clk = 0
+time =                  175 j = 0 k = 0 q = 0 res = 0 clk = 1
+time =                  200 j = 0 k = 0 q = 0 res = 1 clk = 0
+time =                  225 j = 0 k = 0 q = 0 res = 1 clk = 1
+time =                  250 j = 0 k = 0 q = 0 res = 1 clk = 0
+time =                  275 j = 0 k = 0 q = 0 res = 1 clk = 1
+time =                  300 j = 0 k = 1 q = 0 res = 1 clk = 0
+time =                  325 j = 0 k = 1 q = 0 res = 1 clk = 1
+time =                  350 j = 0 k = 1 q = 0 res = 1 clk = 0
+time =                  375 j = 0 k = 1 q = 0 res = 1 clk = 1
+time =                  400 j = 1 k = 0 q = 0 res = 1 clk = 0
+time =                  425 j = 1 k = 0 q = 1 res = 1 clk = 1
+time =                  450 j = 1 k = 0 q = 1 res = 1 clk = 0
+time =                  475 j = 1 k = 0 q = 1 res = 1 clk = 1
+time =                  500 j = 1 k = 1 q = 1 res = 1 clk = 0
+time =                  525 j = 1 k = 1 q = 0 res = 1 clk = 1
+time =                  550 j = 1 k = 1 q = 0 res = 1 clk = 0
+time =                  575 j = 1 k = 1 q = 1 res = 1 clk = 1
+time =                  600 j = 0 k = 1 q = 1 res = 1 clk = 0
+time =                  625 j = 0 k = 1 q = 0 res = 1 clk = 1
+time =                  650 j = 0 k = 1 q = 0 res = 1 clk = 0
+time =                  675 j = 0 k = 1 q = 0 res = 1 clk = 1
+Simulation complete via $finish(1) at time 700 NS + 0
+./tb_jkff.v:14 #100 $finish;
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	irun(64)	15.20-s086: Exiting on Feb 23, 2026 at 11:56:06 IST  (total: 00:03:08)

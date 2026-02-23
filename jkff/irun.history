@@ -1,0 +1,5 @@
+s1(23Feb2026:11:50:30):  irun jkff.v tb_jkff.v 
+s2(23Feb2026:11:51:22):  irun jkff.v tb_jkff.v 
+s3(23Feb2026:11:51:41):  irun jkff.v tb_jkff.v 
+s4(23Feb2026:11:52:09):  irun jkff.v tb_jkff.v 
+s5(23Feb2026:11:52:58):  irun jkff.v tb_jkff.v -access +rwc -gui 
